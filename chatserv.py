@@ -10,7 +10,10 @@ connections = []
 def accept_conns(soc):
     while True:
         connection, addr = soc.accept()
+
+        # `setblocking(0)` allows to set the connection to not halt if there's no an input from the user . As a side effect, every connection.recv call needs to be in a try-catch block so that the server doesn't crash because of lack of input.
         connection.setblocking(0)
+
         connections.append({
             "connection": connection,
             "username": None
@@ -19,18 +22,19 @@ def accept_conns(soc):
 
 def main():
     try:
-        soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)# tells us it's IPv4 and TCP <- abstraction, don't have to touch!
-        print "Socket successfully created"
+        # Set the socket to be IPv4, TCP respectively.
+        soc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)        print "Socket successfully created"
 
     except socket.error as err:
         print "Socket creation failed with error s." %(err)
 
     soc.bind(('', PORT))        
-    print "Socket binded to %s." %(PORT)
+    print "Socket binded to port %s." %(PORT)
 
     soc.listen(5)
     print "Socket is listening."
 
+    # Accepting connections runs on a concurrent thread so that we don't have to wait to accept a new connection to run basic server functions.
     thread.start_new_thread(accept_conns, (soc,))
 
     while True:
