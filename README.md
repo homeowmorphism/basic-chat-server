@@ -50,13 +50,14 @@ We're done! You can play with this very basic chat server 😄!
 
 ## Essential upgrades from basic server: threading and non-blocking. 
 
-*This is a conceptual explaination and not an exposition of added features.*
+*This is a conceptual explaination, not an exposition of added features.*
 
 In a basic server, we have a server and a client. The server waits for the client to connect and sends back a message to the client telling the client he has successfully connected, then closes the connection.
 
 ```
-# Basic server 
-
+# Basic server (client side)
+Thank you for connecting to mah servah!
+Connection closed by foreign host.
 ```
 
 A chat server is only a tiny bit more complicated. It has a central server and multiple clients. It accepts connections from all clients without closing them. For each client, the server waits for a message. When it gets that message, it sends it to all the other clients. 
