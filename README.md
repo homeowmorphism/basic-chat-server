@@ -2,7 +2,7 @@
 
 *Status: done.*
 
-An easy to understand commandline-based Python chat server with minimal threading basic functionalities. This is built on top of a minimal server built in Python. You can find the code, as well as a great explanatory tutorial. [here](). 
+An easy to understand commandline-based Python chat server with minimal threading basic functionalities. This is built on top of a minimal server built in Python. You can find the code, as well as a great explanatory tutorial. [here](https://pythontips.com/2013/08/06/python-socket-network-programming/) -- normally I would upload self-written code with an accompanied explaination on Github, but I have nothing to add to this excellent tutorial.
 
 ## Run
 
@@ -53,11 +53,13 @@ We're done! You can play with this very basic chat server 😄!
 In a basic server, we have a server and a client. The server waits for the client to connect and sends back a message to the client telling the client he has successfully connected, then closes the connection.
 
 ```
+# Basic server 
+
 ```
 
 A chat server is only a tiny bit more complicated. It has a central server and multiple clients. It accepts connections from all clients without closing them. For each client, the server waits for a message. When it gets that message, it sends it to all the other clients. 
 
-The essential upgrades from a basic server are **threading** and **non-blocking**. In the [minimal server scheme](), you can afford to wait for your client to connect to accept the connection and display a message. 
+The essential upgrades from a basic server are **threading** and **non-blocking**. In the [minimal server scheme](https://pythontips.com/2013/08/06/python-socket-network-programming/), you can afford to wait for your client to connect to accept the connection and display a message. 
 
 In a server, you can't afford to do that because you want to handle *multiple* connections and don't want to wait for one client to connect before you respond to an already-connected client! Running the code to accept connections in parallel to the code which receives and sends messages to already connected clients fixes the problem between clients wanting to connect and already-connected clients.
 
@@ -67,4 +69,4 @@ There are other small details in the implementation (like `BUFSIZE`), but they m
 
 ## Acknowledgements
 
-This code was written in the company of Jinny Cho and Wesley Aptekar-Cassels at the Recurse Center. I couldn't have done this without their energy and Wesley knowing what to Google. 
+This code was written in the company of [Jinny Cho](https://github.com/eunjincho503) and [Wesley Aptekar-Cassels] at the [Recurse Center](https://www.recurse.com/). I couldn't have done this without their energy and Wesley knowing what to Google. 
