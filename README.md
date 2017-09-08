@@ -50,6 +50,8 @@ We're done! You can play with this very basic chat server 😄!
 
 ## Essential upgrades from basic server: threading and non-blocking. 
 
+*This is a conceptual explaination and not an exposition of added features.*
+
 In a basic server, we have a server and a client. The server waits for the client to connect and sends back a message to the client telling the client he has successfully connected, then closes the connection.
 
 ```
