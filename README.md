@@ -50,7 +50,7 @@ We're done! You can play with this very basic chat server 😄!
 
 ## Essential upgrades from basic server: threading and non-blocking. 
 
-*This is a conceptual explaination, not an exposition of added features.*
+*This is a conceptual explanation, not an exposition of added features.*
 
 In a basic server, we have a server and a client. The server waits for the client to connect and sends back a message to the client telling the client he has successfully connected, then closes the connection.
 
@@ -72,4 +72,4 @@ There are other small details in the implementation (like `BUFSIZE`), but they m
 
 ## Acknowledgements
 
-This code was written in the company of [Jinny Cho](https://github.com/eunjincho503) and [Wesley Aptekar-Cassels](https://github.com/WesleyAC) at the [Recurse Center](https://www.recurse.com/). I couldn't have done this without their energy and Wesley knowing what to Google. 
+This project was really interesting in that I was exposed to a new set of bugs I had no experience with. It was written in the company of [Jinny Cho](https://github.com/eunjincho503) and [Wesley Aptekar-Cassels](https://github.com/WesleyAC) at the [Recurse Center](https://www.recurse.com/). I couldn't have done this without their energy and Wesley knowing what to Google. 
