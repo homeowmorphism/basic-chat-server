@@ -69,4 +69,4 @@ There are other small details in the implementation (like `BUFSIZE`), but they m
 
 ## Acknowledgements
 
-This code was written in the company of [Jinny Cho](https://github.com/eunjincho503) and [Wesley Aptekar-Cassels] at the [Recurse Center](https://www.recurse.com/). I couldn't have done this without their energy and Wesley knowing what to Google. 
+This code was written in the company of [Jinny Cho](https://github.com/eunjincho503) and [Wesley Aptekar-Cassels](https://github.com/WesleyAC) at the [Recurse Center](https://www.recurse.com/). I couldn't have done this without their energy and Wesley knowing what to Google. 
