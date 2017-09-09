@@ -2,7 +2,7 @@
 
 *Status: done.*
 
-An easy to understand socket-based Python chat server with minimal threading basic functionalities. This is built on top of a minimal server built in Python. You can find the code, as well as a great explanatory tutorial. [here](https://pythontips.com/2013/08/06/python-socket-network-programming/) -- normally I would upload self-written code with an accompanied explaination on Github, but I have nothing to add to this excellent tutorial.
+An easy to understand socket-based Python chat server with minimal threading and basic functionalities (you can input a username, that's pretty much it). This is built on top of a minimal server built in Python. You can find the code, as well as a great explanatory tutorial. [here](https://pythontips.com/2013/08/06/python-socket-network-programming/) -- normally I would upload self-written code with an accompanied explaination on Github, but I have nothing to add to this excellent tutorial.
 
 ## Run
 
